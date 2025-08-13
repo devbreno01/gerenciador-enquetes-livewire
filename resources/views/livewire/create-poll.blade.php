@@ -7,6 +7,11 @@
             <button class="btn" wire:click.prevent="addOption">Adicione uma opção</button>
         </div>
 
+        @error("title")
+            <div class="text-red-500">
+                {{$message}}
+            </div>
+        @enderror
 
        <div class="mt-4">
            @foreach($options as $index => $option)
@@ -16,6 +21,11 @@
                        <input type="text" wire:model="options.{{$index}}">
                        <button class="btn" wire:click.prevent = "removeOption({{$index}})">Remover</button>
                    </div>
+                   @error("options.{$index}")
+                       <div class="text-red-500">
+                           {{$message}}
+                       </div>
+                   @enderror
                </div>
            @endforeach
 

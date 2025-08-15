@@ -18,7 +18,7 @@
       @apply block uppercase text-slate-700 mb-2
     }
 
-    input, 
+    input,
     textarea {
       @apply shadow-sm appearance-none border w-full py-2 px-3 text-slate-700 leading-tight focus:outline-none
     }
@@ -35,7 +35,15 @@
 <body class="container mx-auto mt-10 mb-10 max-w-lg">
   @livewireScripts
 
-  @livewire('create-poll')
+  <div class="mb-4">
+      <h2 class="mb-4 mt-4 text-2xl">Create Poll</h2>
+      @livewire('create-poll')
+  </div>
+
+  <div class="mt-6">
+      <h2 class="mb-4 mt-4 text-2xl">Available Polls</h2>
+      @livewire('polls')
+  </div>
 </body>
 
 </html>

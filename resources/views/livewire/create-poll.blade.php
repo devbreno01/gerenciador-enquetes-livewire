@@ -31,12 +31,8 @@
 
        </div>
 
-        <div class="mt-2">
-            @foreach($options as $index => $option)
-                {{$index + 1}} => {{$option}} <br>
-            @endforeach
-        </div>
-        w
-        <button type="submit" class="btn">Criar enquete</button>
+
+
+        <button type="submit" class="btn mt-2">Criar enquete</button>
     </form>
 </div>

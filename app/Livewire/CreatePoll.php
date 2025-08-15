@@ -73,6 +73,8 @@ class CreatePoll extends Component
         }
         */
         $this->reset(['title', 'options']);
+
+        //creat
     }
 
     //public function mount()

@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Vote extends Model
 {
-    use HasFactory; 
+    use HasFactory;
+
+    protected $fillable = ['option_id'];
 
     public function option() :BelongsTo
     {
-        return $this->belongsTo(Option::class); 
+        return $this->belongsTo(Option::class);
     }
 }

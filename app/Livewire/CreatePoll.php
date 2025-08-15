@@ -74,7 +74,9 @@ class CreatePoll extends Component
         */
         $this->reset(['title', 'options']);
 
-        //creat
+        //creating a event listener
+        $this->dispatch('pollCreated');
+
     }
 
     //public function mount()
